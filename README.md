@@ -153,7 +153,7 @@ This runs all 5 steps in sequence and prints a row-count summary for every table
 
 **Option B — Auto-scheduler (runs with the server):**
 
-The pipeline auto-runs every **24 hours** when the FastAPI server is up. To change the interval:
+The pipeline auto-runs every **168 hours** when the FastAPI server is up. To change the interval:
 
 ```bash
 PIPELINE_INTERVAL_HOURS=12 uvicorn main:app --port 8000
