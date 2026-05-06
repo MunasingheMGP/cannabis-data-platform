@@ -1,0 +1,15 @@
+# ── API ───────────────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+psycopg2-binary==2.9.9
+python-multipart==0.0.9
+
+# ── Scheduler ─────────────────────────────────────────────────────────────────
+APScheduler==3.10.4
+
+# ── Pipeline dependencies ─────────────────────────────────────────────────────
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.2.1
+pandas==2.2.2
+SQLAlchemy==2.0.30
