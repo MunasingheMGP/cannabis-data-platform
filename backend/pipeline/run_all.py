@@ -16,7 +16,7 @@ STEPS = [
     ("scrape_competitor_products.py",  "Scraping competitor products and pricing"),
     ("compare_market_prices.py",       "Comparing prices against HiBuddy and OCS"),
     ("reddit_sentiment_analytics.py",  "Fetching Reddit sentiment and building analytics"),
-    ("score_product_insights.py",      "Scoring products and generating insights"),
+   
 ]
 
 # Tables created by each step (for post-run summary)
@@ -26,7 +26,7 @@ STEP_TABLES = {
     "scrape_competitor_products.py": ["products_pricing_snapshot", "bbfyb_stores"],
     "compare_market_prices.py":      ["hibuddy_raw", "ocs_raw", "market_comparison"],
     "reddit_sentiment_analytics.py": ["reddit_sentiment_raw", "business_analytics_summary"],
-    "score_product_insights.py":     ["executive_actionable_insights"],
+    
 }
 
 
