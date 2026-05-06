@@ -1,7 +1,7 @@
 """
 Pipeline scheduler for the MontKailash Cannabis Platform.
 
-- Runs the full data pipeline automatically (default: every 24 hours).
+- Runs the full data pipeline automatically (default: every 168 hours).
 - Tracks per-run and per-step status in `pipeline_run_log` table.
 - Exposes run status via the FastAPI app (see main.py).
 """
@@ -28,7 +28,7 @@ PIPELINE_STEPS = [
     ("scrape_products",    "scrape_competitor_products",  "main"),
     ("compare_prices",     "compare_market_prices",       "main"),
     ("reddit_sentiment",   "reddit_sentiment_analytics",  "main"),
-    ("score_insights",     "score_product_insights",      "main"),
+    
 ]
 
 # ── Shared mutable state (read by API endpoints) ──────────────────────────────
@@ -150,7 +150,7 @@ def run_pipeline(engine=None):
 
 # ── Scheduler lifecycle ───────────────────────────────────────────────────────
 
-def start_scheduler(engine, interval_hours: int = 24):
+def start_scheduler(engine, interval_hours: int = 168):
     """
     Start the APScheduler background job.
     Call this once from FastAPI's startup event.
